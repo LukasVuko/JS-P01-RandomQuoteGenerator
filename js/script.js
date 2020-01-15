@@ -6,32 +6,29 @@ project 1 - A Random Quote Generator
 
 let quotes = [
   {
-    quote: 'Insert quote here',
-    source: 'Lukas Vukovich',
+    quote: 'One small step for man, one giant leap for mankind.',
+    source: 'Neil Armstrong',
     citation: 'Downtown Toronto',
     year: 2021,
-    tag: 'Funny'
-  },
-  {
-    quote: 'Insert quote here2',
-    source: 'Lukas Vukovich2',
-    citation: 'Downtown Toronto2',
-    year: 2022,
-    tag: 'Politics'
-  },
-  {
-    quote: 'Insert quote here3',
-    source: 'Lukas Vukovich3',
-    citation: 'Downtown Toronto3',
-    year: 2023,
     tag: 'Technology'
   },
   {
-    quote: 'Insert quote here4',
-    source: 'Lukas Vukovich4',
-    citation: 'Downtown Toronto4',
-    year: 2024,
-    tag: 'Economics'
+    quote:
+      '“Success is going from failure to failure without losing your enthusiasm',
+    source: 'Winston Churchill',
+    year: 1944,
+    tag: 'Politics'
+  },
+  {
+    quote: 'You shall not pass!',
+    source: 'Gandalf the Grey',
+    citation: 'Middle Earth',
+    tag: 'Fantasy'
+  },
+  {
+    quote: 'No soup for you!',
+    source: 'The Soup Guy from Seinfeld',
+    year: 1998
   },
   {
     quote: 'Insert quote here5',
@@ -45,8 +42,8 @@ let quotes = [
 // Gets a random quote
 
 function getRandomQuote() {
-  let randomNum = Math.floor(Math.random() * quotes.length) + 1;
-  return quotes[randomNum - 1];
+  let randomNum = Math.floor(Math.random() * quotes.length);
+  return quotes[randomNum];
 }
 
 // Prints a random quote to the page
